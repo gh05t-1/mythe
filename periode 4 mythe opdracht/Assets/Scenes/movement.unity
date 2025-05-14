@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9169636789887149518, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -597,6 +601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform
       objectReference: {fileID: 0}
+    - target: {fileID: 7606153855288755159, guid: 37ff9f6a919bf0342917b34b237e4dd0, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7615947964257341485, guid: 37ff9f6a919bf0342917b34b237e4dd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.5879827
@@ -654,6 +662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7606153855288755159, guid: 37ff9f6a919bf0342917b34b237e4dd0, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7615947964257341485, guid: 37ff9f6a919bf0342917b34b237e4dd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5879827
@@ -710,6 +722,10 @@ PrefabInstance:
     - target: {fileID: 7606153855288755159, guid: 37ff9f6a919bf0342917b34b237e4dd0, type: 3}
       propertyPath: m_Name
       value: platform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606153855288755159, guid: 37ff9f6a919bf0342917b34b237e4dd0, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7615947964257341485, guid: 37ff9f6a919bf0342917b34b237e4dd0, type: 3}
       propertyPath: m_LocalPosition.x

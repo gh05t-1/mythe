@@ -16,16 +16,26 @@ public class PlayerMovement : MonoBehaviour
     private float dashingCooldown = 2f;
     //double jump
     private bool doubleJump;
+    private Vector2 lastPosition;
 
+    [SerializeField]private int jumpsLeft = 1;
+
+
+  //  public Vector2 velocity;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
     // Start is called before the first frame update
-
+    
 
     // Update is called once per frame
+    void Start()
+    {
+        rb.gravityScale = 1.0f;
+
+    }
     void Update()
     {
         if (isDashing)
@@ -33,34 +43,88 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         //makes sure double jump only activates in the air
-        if (IsGrounded() && Input.GetButton("Jump"))
-        { 
-            doubleJump = false;
-        }
+        /*   if (IsGrounded() && !Input.GetButton("Jump"))
+           {
+               doubleJump = false;
+           }*/
 
-        //movement
+
+
+      
+                
+
         horizontal = Input.GetAxisRaw("Horizontal");
-        //makes you jump
-        if(Input.GetButtonDown("Jump"))
-        {
-            if (IsGrounded() || doubleJump)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
 
-                doubleJump = !doubleJump;
-            }
-        }
+
+       
+
+        
+
+
+
+        Jump();
+        if (IsGrounded()) jumpsLeft = 2;
+
         //allows you to jump higher the longer you press
-        if (Input.GetButtonDown("Jump") && rb.linearVelocity.y > 0f)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-        }
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            rb.gravityScale = 0.2f;
+        }
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            rb.gravityScale = 1f;
+        }
 
         Flip();
+
+        //end of update to save info on last frame
+        lastPosition = transform.position;
+
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground")) {
+            if (transform.position.y < lastPosition.y)
+            {
+                //i dropped some pixels
+                jumpsLeft = 1;
+
+            }
+        }
+    }
+
+    private void Jump()
+    {
+  
+        if (Input.GetButtonDown("Jump"))
+        {
+
+           
+            if (jumpsLeft > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                //you dont lose a jump first time you jump
+                jumpsLeft-=2;
+                // doubleJump = !doubleJump;
+
+              
+            }
+            if (rb.linearVelocity.y > 0f)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            }
+
+
+
+
+
+        }
+
     }
     private void FixedUpdate()
     {
@@ -68,13 +132,17 @@ public class PlayerMovement : MonoBehaviour
         {
             return; 
         }
+
         //more movement
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
     }
     private bool IsGrounded()
     {
+        
         //checks if player is on the ground
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+
+        
     }
     private void Flip()
     {
