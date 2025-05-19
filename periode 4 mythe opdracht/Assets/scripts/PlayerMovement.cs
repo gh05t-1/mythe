@@ -8,38 +8,115 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    //dash
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 12f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 2f;
+    //double jump
+    private Vector2 lastPosition;
+
+    [SerializeField] private int jumpsLeft = 0;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private TrailRenderer tr;
     // Start is called before the first frame update
-
+    
 
     // Update is called once per frame
+    void Start()
+    {
+        rb.gravityScale = 1.0f;
+
+    }
     void Update()
     {
-        //movement
+        if (isDashing)
+        {
+            return;
+        }
+ 
+
         horizontal = Input.GetAxisRaw("Horizontal");
-        //makes you jump
-        if(Input.GetButtonDown("Jump")&& IsGrounded())
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
-        }
+
+
+        Jump();
+        if (IsGrounded()) jumpsLeft = 2;
+
         //allows you to jump higher the longer you press
-        if (Input.GetButtonDown("Jump") && rb.linearVelocity.y > 0f)
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            StartCoroutine(Dash());
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            rb.gravityScale = 0.2f;
+        }
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            rb.gravityScale = 1f;
+        }
+
         Flip();
+
+        //end of update to save info on last frame
+        lastPosition = transform.position;
+
     }
+    private void Jump()
+    {
+
+        if (Input.GetButtonDown("Jump"))
+        { 
+            // check if the int has more than 0 if yes than you can jump if no than you cant
+            if (jumpsLeft > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                // BUG!! you dont lose a jump first time you jump
+                //should remove 1 but its 2 rn because of the bug
+                jumpsLeft -= 2;
+            }
+            //makes it so you can jump higher if you hold space
+            if (rb.linearVelocity.y > 0f)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            }
+        }
+
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Ground")) {
+            if (transform.position.y < lastPosition.y)
+            {
+                //i dropped some pixels
+                //if you drop your jumps gets set to 1 so you can jump once while falling
+                jumpsLeft = 1;
+
+            }
+        }
+    } 
+
     private void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return; 
+        }
+
         //more movement
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
     }
     private bool IsGrounded()
     {
+        
         //checks if player is on the ground
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+
+        
     }
     private void Flip()
     {
@@ -51,5 +128,20 @@ public class PlayerMovement : MonoBehaviour
             localscale.x *= -1f;
             transform.localScale = localscale;
         }
+    }
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float orignalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb.gravityScale = orignalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 }
