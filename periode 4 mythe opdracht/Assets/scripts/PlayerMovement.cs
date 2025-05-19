@@ -15,14 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 2f;
     //double jump
-    private bool doubleJump;
     private Vector2 lastPosition;
 
-    [SerializeField]private int jumpsLeft = 1;
-
-
-  //  public Vector2 velocity;
-
+    [SerializeField] private int jumpsLeft = 0;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -42,24 +37,9 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        //makes sure double jump only activates in the air
-        /*   if (IsGrounded() && !Input.GetButton("Jump"))
-           {
-               doubleJump = false;
-           }*/
-
-
-
-      
-                
+ 
 
         horizontal = Input.GetAxisRaw("Horizontal");
-
-
-       
-
-        
-
 
 
         Jump();
@@ -86,46 +66,40 @@ public class PlayerMovement : MonoBehaviour
         lastPosition = transform.position;
 
     }
+    private void Jump()
+    {
+
+        if (Input.GetButtonDown("Jump"))
+        { 
+            // check if the int has more than 0 if yes than you can jump if no than you cant
+            if (jumpsLeft > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                // BUG!! you dont lose a jump first time you jump
+                //should remove 1 but its 2 rn because of the bug
+                jumpsLeft -= 2;
+            }
+            //makes it so you can jump higher if you hold space
+            if (rb.linearVelocity.y > 0f)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            }
+        }
+
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Ground")) {
             if (transform.position.y < lastPosition.y)
             {
                 //i dropped some pixels
+                //if you drop your jumps gets set to 1 so you can jump once while falling
                 jumpsLeft = 1;
 
             }
         }
-    }
+    } 
 
-    private void Jump()
-    {
-  
-        if (Input.GetButtonDown("Jump"))
-        {
-
-           
-            if (jumpsLeft > 0)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
-                //you dont lose a jump first time you jump
-                jumpsLeft-=2;
-                // doubleJump = !doubleJump;
-
-              
-            }
-            if (rb.linearVelocity.y > 0f)
-            {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-            }
-
-
-
-
-
-        }
-
-    }
     private void FixedUpdate()
     {
         if (isDashing)
