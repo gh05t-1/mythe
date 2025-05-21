@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ca525894c01f54b43ad6fb5d1c09bdce
+guid: c19f5318738a1b649a124420b7979c6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2351088194210570443
-    second: BINAH-ezgif.com-webp-to-png-converter_0
+      213: 5356170623827940626
+    second: UIDraft2_barlevel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BINAH-ezgif.com-webp-to-png-converter_0
+      name: UIDraft2_barlevel_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 92
-        height: 92
+        x: 97
+        y: 899
+        width: 558
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc0298b814eb0a020800000000000000
-      internalID: 2351088194210570443
+      spriteID: 21595adddc0f45a40800000000000000
+      internalID: 5356170623827940626
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-      BINAH-ezgif.com-webp-to-png-converter_0: 2351088194210570443
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
