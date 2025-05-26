@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AnnouncerDante_0: 8820203125936663322
+      AnnouncerDante_1: -3720903425396153102
+      AnnouncerDante_2: 6208086228882642635
+      AnnouncerDante_3: 6214951336935718288
+      AnnouncerDante_4: -4813110919513275524
+      AnnouncerDante_5: -2332237623160779892
+      AnnouncerDante_6: 3589470019446736174
+      AnnouncerDante_7: -3575293548911486097
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
