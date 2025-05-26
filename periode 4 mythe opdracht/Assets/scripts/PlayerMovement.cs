@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private float dashingPower = 12f;
     private float dashingTime = 0.2f;
-    private float dashingCooldown = 0.5f;
+    private float dashingCooldown = 2f;
     //double jump
     private Vector2 lastPosition;
 
