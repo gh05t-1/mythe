@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
-    public int maxHealth = 100;
+    public int maxHealth = 10;
     public Slider Slider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +27,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
-        Slider.value = health;
+
         if (health <= 0)
         {
             Destroy(gameObject);
