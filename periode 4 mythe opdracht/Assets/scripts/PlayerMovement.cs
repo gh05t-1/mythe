@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    //glide
+    public bool isFalling = false;
     //dash
     private bool canDash = true;
     private bool isDashing;
@@ -17,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     //double jump
     private Vector2 lastPosition;
 
+    public float gravityscale;
     [SerializeField] private int jumpsLeft = 0;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -51,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) && isFalling)
         {
             rb.gravityScale = 0.2f;
         }
@@ -59,11 +62,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.gravityScale = 1f;
         }
+        if (transform.position.y < lastPosition.y)
+        {
+            isFalling = true;
+        }
 
-        Flip();
+            Flip();
 
         //end of update to save info on last frame
         lastPosition = transform.position;
+        gravityscale = rb.gravityScale;
 
     }
     private void Jump()
@@ -78,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
                 // BUG!! you dont lose a jump first time you jump
                 //should remove 1 but its 2 rn because of the bug
                 jumpsLeft -= 2;
+                isFalling = false;
             }
             //makes it so you can jump higher if you hold space
             if (rb.linearVelocity.y > 0f)
@@ -89,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
+
+        //Check if you walk from a platform there should be one jump left
         if (collision.collider.CompareTag("Ground")) {
             if (transform.position.y < lastPosition.y)
             {
@@ -112,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        
+       //isFalling = false;
         //checks if player is on the ground
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
