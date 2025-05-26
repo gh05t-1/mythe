@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144743454725304160}
   - component: {fileID: 5747717888875668902}
+  - component: {fileID: -1153967484650452112}
   m_Layer: 0
   m_Name: playerwithbattransforming
   m_TagString: Untagged
@@ -50,6 +51,23 @@ MonoBehaviour:
   avatar2: {fileID: 8656162242491880406}
   batDuration: 5
   cooldownDuration: 5
+--- !u!114 &-1153967484650452112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326197969817901803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea57d13a0f2d5c14a88be75d63880da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &5676634070332057980
 GameObject:
   m_ObjectHideFlags: 0
