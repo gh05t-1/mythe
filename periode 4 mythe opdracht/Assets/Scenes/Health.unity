@@ -623,6 +623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shadow
       objectReference: {fileID: 0}
+    - target: {fileID: 352784929318416248, guid: a28ad1c222f3ce74c8741c55eaf8bc3c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4005170022687052381, guid: a28ad1c222f3ce74c8741c55eaf8bc3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.57
