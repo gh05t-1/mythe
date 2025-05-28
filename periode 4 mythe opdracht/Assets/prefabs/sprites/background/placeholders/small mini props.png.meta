@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: ca525894c01f54b43ad6fb5d1c09bdce
+guid: 0edcdb75be0f3004bba817eefa3c5dc5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2351088194210570443
-    second: BINAH-ezgif.com-webp-to-png-converter_0
+      213: 3298403189646528808
+    second: small mini props_0
+  - first:
+      213: -5820407993372684450
+    second: small mini props_1
+  - first:
+      213: 3496771599947653128
+    second: small mini props_2
+  - first:
+      213: 104172984464893250
+    second: small mini props_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BINAH-ezgif.com-webp-to-png-converter_0
+      name: small mini props_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 92
-        height: 92
+        x: 68
+        y: 877
+        width: 626
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc0298b814eb0a020800000000000000
-      internalID: 2351088194210570443
+      spriteID: 82195eca93846cd20800000000000000
+      internalID: 3298403189646528808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small mini props_1
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 416
+        width: 38
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f4d2394c1c93fa0800000000000000
+      internalID: -5820407993372684450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small mini props_2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 450
+        width: 598
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800ed835e37078030800000000000000
+      internalID: 3496771599947653128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small mini props_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 47
+        width: 127
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245e83607c8127100800000000000000
+      internalID: 104172984464893250
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BINAH-ezgif.com-webp-to-png-converter_0: 2351088194210570443
+      small mini props_0: 3298403189646528808
+      small mini props_1: -5820407993372684450
+      small mini props_2: 3496771599947653128
+      small mini props_3: 104172984464893250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SwitchCharacterScript : MonoBehaviour
 {
+
     public GameObject avatar1; // Vampire (child of Player)
     public GameObject avatar2; // Bat (child of Player)
 
@@ -15,6 +16,7 @@ public class SwitchCharacterScript : MonoBehaviour
 
     void Start()
     {
+        movement = GetComponent<PlayerMovement>();
         avatar1.SetActive(true);
         avatar2.SetActive(false);
     }

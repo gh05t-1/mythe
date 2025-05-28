@@ -21,7 +21,7 @@ public class BatMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-        // óf
+        // ï¿½f
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, vertical * speed);
 
     }
