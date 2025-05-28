@@ -1,10 +1,43 @@
 fileFormatVersion: 2
-guid: ca525894c01f54b43ad6fb5d1c09bdce
+guid: 8e203fda27a5e294a9e2798d2d25f410
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2351088194210570443
-    second: BINAH-ezgif.com-webp-to-png-converter_0
+      213: 4993473344049556695
+    second: bat-NESW_0
+  - first:
+      213: -6345396640211466084
+    second: bat-NESW_1
+  - first:
+      213: 77596207651522690
+    second: bat-NESW_2
+  - first:
+      213: 7464014559248988786
+    second: bat-NESW_3
+  - first:
+      213: -6268197280618461677
+    second: bat-NESW_4
+  - first:
+      213: -3815577797394506687
+    second: bat-NESW_5
+  - first:
+      213: 5154073006789968010
+    second: bat-NESW_6
+  - first:
+      213: -5557878150442523298
+    second: bat-NESW_7
+  - first:
+      213: 8005363258175972589
+    second: bat-NESW_8
+  - first:
+      213: -1684851591236924456
+    second: bat-NESW_9
+  - first:
+      213: -4860410292633199777
+    second: bat-NESW_10
+  - first:
+      213: -8418913996238387513
+    second: bat-NESW_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +133,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BINAH-ezgif.com-webp-to-png-converter_0
+      name: bat-NESW_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 92
-        height: 92
+        width: 48
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc0298b814eb0a020800000000000000
-      internalID: 2351088194210570443
+      spriteID: 7dca473cc816c4540800000000000000
+      internalID: 4993473344049556695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-NESW_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c980d35006f90f7a0800000000000000
+      internalID: -6345396640211466084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bat-NESW_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2888cf8f65da31100800000000000000
+      internalID: 77596207651522690
       vertices: []
       indices: 
       edges: []
@@ -125,7 +202,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +212,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BINAH-ezgif.com-webp-to-png-converter_0: 2351088194210570443
+      bat-NESW_0: 4993473344049556695
+      bat-NESW_1: -6345396640211466084
+      bat-NESW_2: 77596207651522690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ca525894c01f54b43ad6fb5d1c09bdce
+guid: 2adb1e1890dc93a4988c3ad939cd05b7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2351088194210570443
-    second: BINAH-ezgif.com-webp-to-png-converter_0
+      213: -2227294742669426013
+    second: download (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -77,7 +77,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BINAH-ezgif.com-webp-to-png-converter_0
+      name: download (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 92
-        height: 92
+        width: 183
+        height: 183
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc0298b814eb0a020800000000000000
-      internalID: 2351088194210570443
+      spriteID: 3a208157b3f0711e0800000000000000
+      internalID: -2227294742669426013
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 57d275e5e00715c4690d5a4d8a32e12d
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BINAH-ezgif.com-webp-to-png-converter_0: 2351088194210570443
+      download (1)_0: -2227294742669426013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
