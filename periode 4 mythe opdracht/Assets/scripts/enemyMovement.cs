@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemyMovement : MonoBehaviour
 {
+    [SerializeField] private int damage = 2;
+    [SerializeField] private PlayerHealth playerHealth;
     [Header("Player References")]
     [SerializeField] private GameObject playerRoot;
     [SerializeField] private Transform vampirePlayer;
@@ -39,6 +42,7 @@ public class enemyMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
         anim.SetBool("isRunning", true);
+
     }
 
     private void Update()
@@ -119,9 +123,20 @@ public class enemyMovement : MonoBehaviour
         {
             lastAttackTime = Time.time;
             anim.SetTrigger("Attack");
-            Debug.Log("Enemy is attacking the player ");
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Attack");
+            playerHealth.TakeDamage(damage);
         }
     }
+
+
 
     private void Flip()
     {
