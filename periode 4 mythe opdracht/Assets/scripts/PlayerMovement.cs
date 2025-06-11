@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     //glide
     public bool isFalling = false;
     //dash
-    private bool canDash = true;
+    public bool canDash = true;
     private bool isDashing;
     private float dashingPower = 12f;
     private float dashingTime = 0.2f;
