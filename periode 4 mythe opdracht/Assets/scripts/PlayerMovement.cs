@@ -18,6 +18,18 @@ public class PlayerMovement : MonoBehaviour
     private float dashingCooldown = 2f;
     //double jump
     private Vector2 lastPosition;
+    //wallslide
+    private bool isWallSliding;
+    private float wallSlidingSpeed = 200f;
+    //wallJump
+    private bool isWallJumping;
+    private float wallJumpingDirection;
+    private float wallJumpingTime = 0.5f;
+    private float wallJumpingCounter;
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower = new Vector2(3f, 5f);
+    private float wallJumpCooldown = 0.45f; 
+    private float wallJumpCooldownTimer = 0f; 
 
     public float gravityscale;
     [SerializeField] private int jumpsLeft = 0;
@@ -25,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
+    [SerializeField] private Transform wallCheck;
+    [SerializeField] private LayerMask wallLayer;
     // Start is called before the first frame update
     
 
@@ -73,6 +87,13 @@ public class PlayerMovement : MonoBehaviour
         lastPosition = transform.position;
         gravityscale = rb.gravityScale;
 
+        WallSlide();
+        WallJump();
+
+        if (!isWallJumping)
+        {
+            Flip();
+        }
     }
     private void Jump()
     {
@@ -117,6 +138,10 @@ public class PlayerMovement : MonoBehaviour
         {
             return; 
         }
+        if (!isWallJumping)
+        {
+            rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        }
 
         //more movement
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
@@ -128,6 +153,67 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
 
         
+    }
+    private bool IsWalled()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+    }
+
+    private void WallSlide()
+    {
+        if (IsWalled() && !IsGrounded() && horizontal != 0f)
+        {
+            isWallSliding = true;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+    }
+
+    private void WallJump()
+        {
+            if (wallJumpCooldownTimer > 0f)
+            {
+                wallJumpCooldownTimer -= Time.deltaTime;
+            }
+
+        if (isWallSliding)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingCounter = wallJumpingTime;
+
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else
+        {
+            wallJumpingCounter -= Time.deltaTime;
+        }
+
+        // Wall jump only if cooldown is over
+        if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f && wallJumpCooldownTimer <= 0f)
+        {
+            isWallJumping = true;
+            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            wallJumpingCounter = 0f;
+
+            if (transform.localScale.x != wallJumpingDirection)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
+            wallJumpCooldownTimer = wallJumpCooldown; // Reset cooldown
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        }
+    }
+
+    private void StopWallJumping()
+    {
+        isWallJumping = false;
     }
     private void Flip()
     {
