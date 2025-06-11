@@ -13,10 +13,18 @@ public class SwitchCharacterScript : MonoBehaviour
     private bool isOnCooldown = false;
     private bool isTransforming = false;
 
+  
+
+    private GameObject player;
+
     void Start()
     {
-        avatar1.SetActive(true);
-        avatar2.SetActive(false);
+     
+        player = Instantiate(avatar1, transform);  
+       
+
+        //avatar1.SetActive(true);
+        //avatar2.SetActive(false);
     }
 
     void Update()
@@ -31,21 +39,44 @@ public class SwitchCharacterScript : MonoBehaviour
     {
         isTransforming = true;
 
+        /*
         // Use current position of the active avatar
         Vector3 position = avatar1.activeSelf ? avatar1.transform.position : avatar2.transform.position;
+        */
 
+        /*
         // Transform to bat
         avatar1.SetActive(false);
         avatar2.transform.position = position;
         avatar2.SetActive(true);
+        */
+      
+        Destroy(player);
+        player = Instantiate(avatar2, transform);
+
+
+        
+        
 
         yield return new WaitForSeconds(batDuration);
 
+
+        /*
         // Transform back to vampire
         position = avatar2.transform.position;
         avatar2.SetActive(false);
         avatar1.transform.position = position;
         avatar1.SetActive(true);
+
+        */
+
+        Destroy(player);
+        player = Instantiate(avatar1,transform);
+
+
+       
+        
+
 
         isTransforming = false;
         StartCoroutine(CooldownTimer());
