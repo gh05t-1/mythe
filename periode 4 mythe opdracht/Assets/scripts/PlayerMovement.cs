@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D parentRB;
     private float horizontal;
-    private float speed = 8f;
+    [SerializeField]private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     //glide
@@ -19,9 +20,9 @@ public class PlayerMovement : MonoBehaviour
     //double jump
     private Vector2 lastPosition;
 
-    public float gravityscale;
+    
     [SerializeField] private int jumpsLeft = 0;
-    [SerializeField] private Rigidbody2D rb;
+   // [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
@@ -31,7 +32,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        rb.gravityScale = 1.0f;
+
+
+        Debug.Log("!!");
+       
+        parentRB = transform.parent.GetComponent<Rigidbody2D>();
+        parentRB.gravityScale = 1.0f;
+        Debug.Log(parentRB);
 
     }
     void Update()
@@ -56,11 +63,11 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Q) && isFalling)
         {
-            rb.gravityScale = 0.2f;
+            parentRB.gravityScale = 0.2f;
         }
         if (Input.GetKeyUp(KeyCode.Q))
         {
-            rb.gravityScale = 1f;
+            parentRB.gravityScale = 1f;
         }
         if (transform.position.y < lastPosition.y)
         {
@@ -71,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
 
         //end of update to save info on last frame
         lastPosition = transform.position;
-        gravityscale = rb.gravityScale;
+        //gravityscale = parentRB.gravityScale;
 
     }
     private void Jump()
@@ -82,16 +89,16 @@ public class PlayerMovement : MonoBehaviour
             // check if the int has more than 0 if yes than you can jump if no than you cant
             if (jumpsLeft > 0)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                parentRB.linearVelocity = new Vector2(parentRB.linearVelocity.x, jumpingPower);
                 // BUG!! you dont lose a jump first time you jump
                 //should remove 1 but its 2 rn because of the bug
                 jumpsLeft -= 2;
                 isFalling = false;
             }
             //makes it so you can jump higher if you hold space
-            if (rb.linearVelocity.y > 0f)
+            if (parentRB.linearVelocity.y > 0f)
             {
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+                parentRB.linearVelocity = new Vector2(parentRB.linearVelocity.x, parentRB.linearVelocity.y * 0.5f);
             }
         }
 
@@ -119,7 +126,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //more movement
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+
+      
+        parentRB.linearVelocity = new Vector2(horizontal * speed, parentRB.linearVelocity.y);
+        Debug.Log(parentRB.linearVelocity);
     }
     private bool IsGrounded()
     {
@@ -144,13 +154,13 @@ public class PlayerMovement : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        float orignalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        float orignalGravity = parentRB.gravityScale;
+        parentRB.gravityScale = 0f;
+        parentRB.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
-        rb.gravityScale = orignalGravity;
+        parentRB.gravityScale = orignalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
