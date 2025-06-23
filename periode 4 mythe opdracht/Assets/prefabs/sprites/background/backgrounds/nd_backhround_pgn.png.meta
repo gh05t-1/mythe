@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a3c32c91bfc639b44a56e3b0cf1c0ee5
+guid: c650a503b401d844392df679f7954581
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7338235968282774013
-    second: backround_clouds_air_0
+      213: -7823990450520364586
+    second: nd_backhround_pgn_0
+  - first:
+      213: -8014627066478579524
+    second: nd_backhround_pgn_1
+  - first:
+      213: 6605566515453220936
+    second: nd_backhround_pgn_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +106,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backround_clouds_air_0
+      name: nd_backhround_pgn_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        y: 413
+        width: 1432
+        height: 1652
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 306b2883449592a90800000000000000
-      internalID: -7338235968282774013
+      spriteID: 6d96fa6732a9b6390800000000000000
+      internalID: -7823990450520364586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nd_backhround_pgn_1
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 427
+        width: 214
+        height: 1125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb03057752356c090800000000000000
+      internalID: -8014627066478579524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nd_backhround_pgn_2
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 151
+        width: 1810
+        height: 1813
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 848ddcd7fbfabab50800000000000000
+      internalID: 6605566515453220936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nd_backhround_pgn_3
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 0
+        width: 376
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d4737a8ed4a9348823e844c6dfedc0
+      internalID: 1917856780
       vertices: []
       indices: 
       edges: []
@@ -125,7 +197,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 2fd4adc7296be4c4d95ed1047e8eafaa
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +207,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      backround_clouds_air_0: -7338235968282774013
+      nd_backhround_pgn_0: -7823990450520364586
+      nd_backhround_pgn_1: -8014627066478579524
+      nd_backhround_pgn_2: 6605566515453220936
+      nd_backhround_pgn_3: 1917856780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -72,15 +72,15 @@ public class PlayerMovement : MonoBehaviour
 
         //allows you to jump higher the longer you press
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if (Input.GetButtonDown("Dash") && canDash)
         {
             StartCoroutine(Dash());
         }
-        if (Input.GetKey(KeyCode.Q) && isFalling)
+        if (Input.GetButton("Glide") && isFalling)
         {
             parentRB.gravityScale = 0.2f;
         }
-        if (Input.GetKeyUp(KeyCode.Q))
+        if (Input.GetButtonUp("Glide"))
         {
             parentRB.gravityScale = 1f;
         }

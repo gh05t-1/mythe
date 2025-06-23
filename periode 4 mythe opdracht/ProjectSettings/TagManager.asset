@@ -43,5 +43,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: shadows
+    uniqueID: 3627198345
+    locked: 0
+  - name: outside
+    uniqueID: 3629959763
+    locked: 0
+  - name: big walls
+    uniqueID: 3253253135
+    locked: 0
   m_RenderingLayers:
   - Default

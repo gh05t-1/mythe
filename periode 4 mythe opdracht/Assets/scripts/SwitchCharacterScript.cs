@@ -29,7 +29,7 @@ public class SwitchCharacterScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O) && !isOnCooldown && !isTransforming)
+        if (Input.GetButtonDown("Transform") && !isOnCooldown && !isTransforming)
         {
             StartCoroutine(TemporaryTransformation());
         }

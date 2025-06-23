@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bf9db75cb457b894aaed151a526f73cb
+guid: 7526d850e37377d409269d9942f6aefa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3646860966157269892
-    second: WIp_noncarpet_tiles_0
+      213: 65860210745552156
+    second: tilemap_SpireIntiriourDarker_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_0
+      name: tilemap_SpireIntiriourDarker_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,16 +113,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dc7a1eded95ef5d45ab6b206dbd1b861
-      internalID: -640540048
+      spriteID: c1d2252438bf9e000800000000000000
+      internalID: 65860210745552156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_1
+      name: tilemap_SpireIntiriourDarker_1
       rect:
         serializedVersion: 2
         x: 500
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 044b683b00cc1f44a957eef25e429a7b
-      internalID: -1451570697
+      spriteID: 6441cd430921c6949ab23d3f0f56571a
+      internalID: -827225581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_2
+      name: tilemap_SpireIntiriourDarker_2
       rect:
         serializedVersion: 2
         x: 1000
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a93cecedf7a21384cbd04b6510ee86cc
-      internalID: -944165904
+      spriteID: 3fc80ce757e49e744b56fb1e339eff5a
+      internalID: 835505413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_3
+      name: tilemap_SpireIntiriourDarker_3
       rect:
         serializedVersion: 2
         x: 1500
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a306eec10f00174595883dfac89d29e
-      internalID: -433188418
+      spriteID: e9b813c0f37c110419b3ae9c8fe73f22
+      internalID: 1974915228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_4
+      name: tilemap_SpireIntiriourDarker_4
       rect:
         serializedVersion: 2
         x: 0
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8178cc0840b2d40b5dc3522c553118
-      internalID: 603350107
+      spriteID: c48d6dab35d9c2b4ebc38082e3b9b4a2
+      internalID: -1199233561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_5
+      name: tilemap_SpireIntiriourDarker_5
       rect:
         serializedVersion: 2
         x: 500
@@ -225,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f80c484cac4bc9b4da5f95d2c217656c
-      internalID: -317652396
+      spriteID: 21063ef8627e5d743a1f09849e97e029
+      internalID: 127658394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_6
+      name: tilemap_SpireIntiriourDarker_6
       rect:
         serializedVersion: 2
         x: 1000
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04d5d4b7974a80142b670295e2bfebce
-      internalID: 632234053
+      spriteID: 04a307441ed4d9a46b042b34ced922bc
+      internalID: 1452604211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_7
+      name: tilemap_SpireIntiriourDarker_7
       rect:
         serializedVersion: 2
         x: 1500
@@ -269,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c98d9ee72e209a6448f4b45e84313099
-      internalID: 780275650
+      spriteID: a938050be76209e48a6d65fa32fe4eb5
+      internalID: 173393191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_8
+      name: tilemap_SpireIntiriourDarker_8
       rect:
         serializedVersion: 2
         x: 0
@@ -291,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2117a35851acfb0458e73c2dcc8cd2ab
-      internalID: -833174350
+      spriteID: a2a2aed8c6075bf41b96619ba7a45fee
+      internalID: 1575777889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_9
+      name: tilemap_SpireIntiriourDarker_9
       rect:
         serializedVersion: 2
         x: 500
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d67e2a4e2a045f042a05ad332425b478
-      internalID: 232542699
+      spriteID: aab4d9d0392a43d4fae6477f740845d1
+      internalID: 1100434541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_10
+      name: tilemap_SpireIntiriourDarker_10
       rect:
         serializedVersion: 2
         x: 1000
@@ -335,14 +335,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14dc464e89d4fa841958dadd95bf5f68
-      internalID: -711439847
+      spriteID: c78b4c162b3e18f41bb7c1238b6abe3d
+      internalID: -731333805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_11
+      name: tilemap_SpireIntiriourDarker_11
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 500
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8d4b21b1762314898c4ae1c064738a
+      internalID: -1116101053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_SpireIntiriourDarker_12
       rect:
         serializedVersion: 2
         x: 0
@@ -357,14 +379,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de6c9c05f9470114aad92091b002b8c3
-      internalID: -564184785
+      spriteID: f77fe77629a0d9f47809c2a271215a3b
+      internalID: -1616521227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_12
+      name: tilemap_SpireIntiriourDarker_13
       rect:
         serializedVersion: 2
         x: 500
@@ -379,14 +401,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1adbd3e4fe2af594799c864552be3259
-      internalID: -2036384820
+      spriteID: 832dd8415e5e3f04da00b5d5458dc8e9
+      internalID: -20603920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WIp_noncarpet_tiles_13
+      name: tilemap_SpireIntiriourDarker_14
       rect:
         serializedVersion: 2
         x: 1000
@@ -401,8 +423,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f40efe8238fb4946bca462ed9a0df7a
-      internalID: -355886612
+      spriteID: 8686466ee55499d4c8f11e1ed8c91c33
+      internalID: -1880706073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap_SpireIntiriourDarker_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd296746591cab478fbdcbefb99ec67
+      internalID: -770034704
       vertices: []
       indices: 
       edges: []
@@ -411,7 +455,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 81047d029196b7943a9ac2e3e615eb69
+    spriteID: 289aec1d54a77e9489631d44c020fb55
     internalID: 0
     vertices: []
     indices: 
@@ -421,20 +465,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WIp_noncarpet_tiles_0: -640540048
-      WIp_noncarpet_tiles_1: -1451570697
-      WIp_noncarpet_tiles_10: -711439847
-      WIp_noncarpet_tiles_11: -564184785
-      WIp_noncarpet_tiles_12: -2036384820
-      WIp_noncarpet_tiles_13: -355886612
-      WIp_noncarpet_tiles_2: -944165904
-      WIp_noncarpet_tiles_3: -433188418
-      WIp_noncarpet_tiles_4: 603350107
-      WIp_noncarpet_tiles_5: -317652396
-      WIp_noncarpet_tiles_6: 632234053
-      WIp_noncarpet_tiles_7: 780275650
-      WIp_noncarpet_tiles_8: -833174350
-      WIp_noncarpet_tiles_9: 232542699
+      tilemap_SpireIntiriourDarker_0: 65860210745552156
+      tilemap_SpireIntiriourDarker_1: -827225581
+      tilemap_SpireIntiriourDarker_10: -731333805
+      tilemap_SpireIntiriourDarker_11: -1116101053
+      tilemap_SpireIntiriourDarker_12: -1616521227
+      tilemap_SpireIntiriourDarker_13: -20603920
+      tilemap_SpireIntiriourDarker_14: -1880706073
+      tilemap_SpireIntiriourDarker_15: -770034704
+      tilemap_SpireIntiriourDarker_2: 835505413
+      tilemap_SpireIntiriourDarker_3: 1974915228
+      tilemap_SpireIntiriourDarker_4: -1199233561
+      tilemap_SpireIntiriourDarker_5: 127658394
+      tilemap_SpireIntiriourDarker_6: 1452604211
+      tilemap_SpireIntiriourDarker_7: 173393191
+      tilemap_SpireIntiriourDarker_8: 1575777889
+      tilemap_SpireIntiriourDarker_9: 1100434541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
