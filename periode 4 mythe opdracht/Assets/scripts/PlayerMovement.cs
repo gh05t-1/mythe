@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D parentRB;
     private float horizontal;
-    [SerializeField]private float speed = 8f;
-    private float jumpingPower = 16f;
+    [SerializeField] private float speed = 8f;
+    [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
     //glide
     public bool isFalling = false;
@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private float jumpGravity = 0.5f;
+    [SerializeField] private float fallGravity = 2f;
 
     private Animator anim;
 
@@ -55,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
        
         parentRB = transform.parent.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        parentRB.gravityScale = 1.0f;
+        parentRB.gravityScale = fallGravity;
         Debug.Log(parentRB);
 
     }
@@ -65,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
- 
+        Debug.Log(parentRB.linearVelocityY);
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -78,12 +80,17 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("AnimGroundedCheck", false);
         }
-        
-
-
+        if (isFalling)
+        {
+            parentRB.gravityScale = fallGravity;
+        }
+      
         Jump();
-        if (IsGrounded()) jumpsLeft = 2;
-
+        if (IsGrounded())
+        {
+            jumpsLeft = 2;
+            parentRB.gravityScale = 1f;
+        }
         //allows you to jump higher the longer you press
 
         if (Input.GetButtonDown("Dash") && canDash)
@@ -119,11 +126,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            
+
             // check if the int has more than 0 if yes than you can jump if no than you cant
             if (jumpsLeft > 0)
             {
-                
+                parentRB.gravityScale = jumpGravity;
                 parentRB.linearVelocity = new Vector2(parentRB.linearVelocity.x, jumpingPower);
                 // BUG!! you dont lose a jump first time you jump
                 //should remove 1 but its 2 rn because of the bug
