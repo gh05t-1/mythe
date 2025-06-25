@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    private Animator anim;
+
     // Start is called before the first frame update
 
 
@@ -49,9 +51,10 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        Debug.Log("!!");
+        //Debug.Log("!!");
        
         parentRB = transform.parent.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         parentRB.gravityScale = 1.0f;
         Debug.Log(parentRB);
 
@@ -66,6 +69,17 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        anim.SetFloat("AnimHorizontal", horizontal);
+        if (IsGrounded())
+        {
+            anim.SetBool("AnimGroundedCheck", true);
+        }
+        else
+        {
+            anim.SetBool("AnimGroundedCheck", false);
+        }
+        
+
 
         Jump();
         if (IsGrounded()) jumpsLeft = 2;
@@ -75,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Dash") && canDash)
         {
             StartCoroutine(Dash());
+            
         }
         if (Input.GetButton("Glide") && isFalling)
         {
@@ -103,15 +118,18 @@ public class PlayerMovement : MonoBehaviour
     {
 
         if (Input.GetButtonDown("Jump"))
-        { 
+        {
+            
             // check if the int has more than 0 if yes than you can jump if no than you cant
             if (jumpsLeft > 0)
             {
+                
                 parentRB.linearVelocity = new Vector2(parentRB.linearVelocity.x, jumpingPower);
                 // BUG!! you dont lose a jump first time you jump
                 //should remove 1 but its 2 rn because of the bug
                 jumpsLeft -= 2;
                 isFalling = false;
+                anim.SetTrigger("JumpingTrigger");
             }
             //makes it so you can jump higher if you hold space
             if (parentRB.linearVelocity.y > 0f)
@@ -147,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
 
       
         parentRB.linearVelocity = new Vector2(horizontal * speed, parentRB.linearVelocity.y);
-        Debug.Log(parentRB.linearVelocity);
+        //Debug.Log(parentRB.linearVelocity);
     }
     private bool IsGrounded()
     {
@@ -233,6 +251,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator Dash()
     {
+        anim.SetTrigger("DashTrigger");
         canDash = false;
         isDashing = true;
         float orignalGravity = parentRB.gravityScale;
