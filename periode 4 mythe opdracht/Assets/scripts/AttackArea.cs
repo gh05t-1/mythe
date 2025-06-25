@@ -9,14 +9,14 @@ public class AttackArea : MonoBehaviour
     //private int damage = 3;
     private GameObject player;
 
-    private Health PlayersHealth; 
+    private PlayerHealth Health; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         Debug.Log("this works");
         player = GameObject.FindGameObjectWithTag("Player");
-        PlayersHealth = player.GetComponent<playerHealth>();
+        Health = player.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class AttackArea : MonoBehaviour
 
             Debug.Log("hit an anemy");
             enemy.GetComponent<EnemyHealth>().LoseHealth(2);
-            PlayersHealth.Revive(10);
+            Health.Revive(100);
 
         }
         /*

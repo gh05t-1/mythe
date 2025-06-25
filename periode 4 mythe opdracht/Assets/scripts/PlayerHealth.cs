@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
-        Debug.Log(health);
+        //Debug.Log(health);
         Slider.value = health;
 
         if (health <= 0)

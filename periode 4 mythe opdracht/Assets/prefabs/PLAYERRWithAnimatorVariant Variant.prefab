@@ -14,7 +14,7 @@ GameObject:
   m_Layer: 0
   m_Name: Attackarea
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -67,17 +67,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.31848478, y: 0.06640731}
+  m_Offset: {x: -0.16053915, y: 0.08760047}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.94, y: 5.77}
+    newSize: {x: 8.98, y: 5.05}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.3460402, y: 0.21790424}
+  m_Size: {x: 4.5883493, y: 0.17551792}
   m_EdgeRadius: 0
 --- !u!114 &2604334484708588053
 MonoBehaviour:
@@ -91,7 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa6dbbf995b0fc4bbcdff9afce0eb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
 --- !u!1001 &1870438473393792600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,6 +156,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6450164965342737847, guid: 45b0fc4eaae00564c914f6eda0882c40, type: 3}
+      propertyPath: dashingPower
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450164965342737847, guid: 45b0fc4eaae00564c914f6eda0882c40, type: 3}
       propertyPath: jumpingPower
       value: 16
       objectReference: {fileID: 0}
@@ -189,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackArea: {fileID: 4047234425682563042}
-  attackTime: 0.1
+  attackTime: 0.3
 --- !u!4 &6024589891939059428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5363370956262973628, guid: 45b0fc4eaae00564c914f6eda0882c40, type: 3}
