@@ -49,11 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1862759918076991614, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
       propertyPath: m_Size.x
-      value: 0.89
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 1862759918076991614, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
       propertyPath: m_Size.y
-      value: 0.0001
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 1862759918076991614, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
       propertyPath: m_Material
@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: tr
       value: 
       objectReference: {fileID: 3075765595339270561}
+    - target: {fileID: 2381321712671503981, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
+      propertyPath: wallCheck
+      value: 
+      objectReference: {fileID: 6554310373241851047}
     - target: {fileID: 2381321712671503981, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 128
@@ -77,11 +81,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3666269641508545382, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.093755
       objectReference: {fileID: 0}
     - target: {fileID: 3666269641508545382, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.4671502
       objectReference: {fileID: 0}
     - target: {fileID: 3666269641508545382, guid: 6072c637d95cebf44bde93b5563b0242, type: 3}
       propertyPath: m_LocalPosition.z
@@ -301,14 +305,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2221879281310319806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53c266cbfbc1e144296de6dbe58dcf0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 10
-  Slider: {fileID: 0}
+  maxHealth: 100
+  Slider: {fileID: 5272862820541319537, guid: e0f1b399fe84c91408e89001e8f62191, type: 3}
 --- !u!114 &6003800750744966876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +320,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2221879281310319806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43e4782c7c8365a4e8d623b5648a08dc, type: 3}
   m_Name: 
