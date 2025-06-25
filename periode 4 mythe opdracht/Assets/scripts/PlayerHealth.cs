@@ -75,6 +75,17 @@ public class PlayerHealth : MonoBehaviour
     {
         sr.enabled = visible;
     }
+    public void Revive(int amount) {
+        Debug.Log("try to revive");
+        if (health + amount <= maxHealth)
+        {
+            health += amount;
+        }
+        else
+        {
+            health = maxHealth;
+        }
+    }
 }
 
     private void ToggleColliders(bool active)
