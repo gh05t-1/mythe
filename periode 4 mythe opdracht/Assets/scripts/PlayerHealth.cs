@@ -35,4 +35,15 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void Revive(int amount) {
+        Debug.Log("try to revive");
+        if (health + amount <= maxHealth)
+        {
+            health += amount;
+        }
+        else
+        {
+            health = maxHealth;
+        }
+    }
 }

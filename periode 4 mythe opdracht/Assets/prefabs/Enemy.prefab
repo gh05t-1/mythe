@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 506729608293979576}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,6 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838877490cdff074c915e9cf9cd599c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 2
+  playerHealth: {fileID: 0}
   playerRoot: {fileID: 0}
   vampirePlayer: {fileID: 0}
   batPlayer: {fileID: 0}
