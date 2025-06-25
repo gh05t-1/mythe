@@ -94,10 +94,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButton("Glide") && isFalling)
         {
             parentRB.gravityScale = 0.2f;
+            anim.SetBool("GlidingTrigger", true);
         }
         if (Input.GetButtonUp("Glide"))
         {
             parentRB.gravityScale = 1f;
+            anim.SetBool("GlidingTrigger", false);
         }
         if (transform.position.y < lastPosition.y)
         {
