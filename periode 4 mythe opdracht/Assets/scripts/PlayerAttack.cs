@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 
     private bool attacking = false;
 
-    private float attackTime = 0.25f;
+    [SerializeField]private float attackTime = 0.25f;
     private float timer = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetButtonDown("Attack1"))
         {
 
             Attack();

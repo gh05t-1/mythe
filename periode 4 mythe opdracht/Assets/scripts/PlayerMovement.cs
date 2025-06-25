@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        Debug.Log(parentRB.linearVelocityY);
+        //Debug.Log(parentRB.linearVelocityY);
 
         horizontal = Input.GetAxisRaw("Horizontal");
 

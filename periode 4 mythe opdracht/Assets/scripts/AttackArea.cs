@@ -7,13 +7,16 @@ using UnityEngine.UI;
 public class AttackArea : MonoBehaviour
 {
     //private int damage = 3;
+    private GameObject player;
 
-    public PlayerHealth playerHealth;
+    private Health PlayersHealth; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("this works");
 
+        Debug.Log("this works");
+        player = GameObject.FindGameObjectWithTag("Player");
+        PlayersHealth = player.GetComponent<playerHealth>();
     }
 
     // Update is called once per frame
@@ -30,7 +33,7 @@ public class AttackArea : MonoBehaviour
 
             Debug.Log("hit an anemy");
             enemy.GetComponent<EnemyHealth>().LoseHealth(2);
-            playerHealth.Revive(10);
+            PlayersHealth.Revive(10);
 
         }
         /*

@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hemo_placeholder_sprite_0: -8638911392727206548
+      hemo_placeholder_sprite_1: 3692271583858444219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

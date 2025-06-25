@@ -70,11 +70,13 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private void SetPlayerVisible(bool visible)
-{
-    foreach (var sr in spriteRenderers)
     {
-        sr.enabled = visible;
+        foreach (var sr in spriteRenderers)
+        {
+            sr.enabled = visible;
+        }
     }
+    
     public void Revive(int amount) {
         Debug.Log("try to revive");
         if (health + amount <= maxHealth)
@@ -86,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
             health = maxHealth;
         }
     }
-}
+    
 
     private void ToggleColliders(bool active)
     {
@@ -95,4 +97,5 @@ public class PlayerHealth : MonoBehaviour
             c.enabled = active;
         }
     }
+    
 }
