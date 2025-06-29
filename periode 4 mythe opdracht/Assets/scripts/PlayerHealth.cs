@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     private Renderer[] renderers;
     private Collider[] colliders;
     private SpriteRenderer[] spriteRenderers;
+    [SerializeField] private SwitchCharacterScript switchCharacter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         {
             transform.position = respawnPoint.position;
         }
-        spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+        //spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
     }
 
@@ -68,12 +69,20 @@ public class PlayerHealth : MonoBehaviour
 
         yield return null; 
     }
-
+    
     private void SetPlayerVisible(bool visible)
     {
-        foreach (var sr in spriteRenderers)
+        var player = switchCharacter.GetCurrentPlayer(); // get the current one
+        if (player == null) return;
+
+        foreach (var sr in player.GetComponentsInChildren<SpriteRenderer>())
         {
-            sr.enabled = visible;
+            if (sr != null)
+                sr.enabled = visible;
+        }
+        //foreach (var sr in spriteRenderers)
+        {
+            //sr.enabled = visible;
         }
     }
     

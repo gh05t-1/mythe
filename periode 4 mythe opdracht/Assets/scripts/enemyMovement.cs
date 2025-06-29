@@ -34,6 +34,10 @@ public class enemyMovement : MonoBehaviour
     [SerializeField] private float attackRange = 1.5f;
     [SerializeField] private float attackCooldown = 1f;
     private float lastAttackTime;
+    private float lastDamageTime = 0f;
+    private bool isTouchingPlayer = false;
+    [SerializeField] private float waitForSeconds = 1f;
+
 
     private void Start()
     {
@@ -126,6 +130,7 @@ public class enemyMovement : MonoBehaviour
         }
         
     }
+    /*
     private void OnTriggerEnter2D(Collider2D other)
     {
 
@@ -135,7 +140,34 @@ public class enemyMovement : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
     }
+    */
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (!isTouchingPlayer)
+            {
+                isTouchingPlayer = true;
+                lastDamageTime = Time.time; // wait starts here
+                return;
+            }
 
+            if (Time.time >= lastDamageTime + waitForSeconds)
+            {
+                playerHealth.TakeDamage(damage);
+                Debug.Log("Tick Damage");
+                lastDamageTime = Time.time;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isTouchingPlayer = false;
+        }
+    }
 
 
     private void Flip()

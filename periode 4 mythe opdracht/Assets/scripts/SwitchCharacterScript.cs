@@ -9,6 +9,11 @@ public class SwitchCharacterScript : MonoBehaviour
     [Header("Transformation Settings")]
     public float batDuration = 5f;
     public float cooldownDuration = 10f;
+    public GameObject GetCurrentPlayer()
+    {
+        return player;
+    }
+
 
     private bool isOnCooldown = false;
     private bool isTransforming = false;

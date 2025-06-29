@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: vampirePlayer
       value: 
       objectReference: {fileID: 1949883610}
+    - target: {fileID: 391022569792321896, guid: 080475e862a48fb41b94ef7b8745a63f, type: 3}
+      propertyPath: waitForSeconds
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 404043853976956556, guid: 080475e862a48fb41b94ef7b8745a63f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.509548
@@ -768,6 +772,18 @@ MonoBehaviour:
   maxHealth: 10
   Slider: {fileID: 1531610735}
   respawnPoint: {fileID: 731742612}
+  switchCharacter: {fileID: 1949883613}
+--- !u!114 &1949883613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 930178761315714032, guid: eb8991a366ac11145b8952327bae5285, type: 3}
+  m_PrefabInstance: {fileID: 469786122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949883607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a002f87150f0b6e4f9b16076bd1c1460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2035730351
 GameObject:
   m_ObjectHideFlags: 0
