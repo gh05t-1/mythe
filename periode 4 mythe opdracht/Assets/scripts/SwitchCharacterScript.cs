@@ -38,9 +38,18 @@ public class SwitchCharacterScript : MonoBehaviour
         {
             StartCoroutine(TemporaryTransformation());
         }
-        if (Input.GetButtonDown("Transform") && isTransforming)
+        else if (Input.GetButtonDown("Transform") && isTransforming)
         {
-            StopCoroutine(TemporaryTransformation());
+            Destroy(player);
+            player = Instantiate(avatar1, transform);
+
+
+
+
+
+
+            isTransforming = false;
+            StartCoroutine(CooldownTimer());
         }
     }
 

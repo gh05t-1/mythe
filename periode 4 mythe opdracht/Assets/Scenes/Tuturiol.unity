@@ -6767,6 +6767,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 930178761315714032, guid: eb8991a366ac11145b8952327bae5285, type: 3}
+      propertyPath: avatar1
+      value: 
+      objectReference: {fileID: 513571498730005222, guid: bf5d38b0086ac8643a45d5071b43cecf, type: 3}
     - target: {fileID: 1729634059453990263, guid: eb8991a366ac11145b8952327bae5285, type: 3}
       propertyPath: m_Name
       value: PlayerHolder
