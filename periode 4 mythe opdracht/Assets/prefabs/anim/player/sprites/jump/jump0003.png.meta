@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: b25a895e25ac177428eef4363f7d03d9
+guid: 43e01be603205f0489b746b92ab3c79d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3189722210208497878
-    second: Mirror_Dracula_png_0
+      213: 1536742390749180881
+    second: jump0003_0
+  - first:
+      213: -6366540376086147435
+    second: jump0003_1
+  - first:
+      213: 3236043432348608581
+    second: jump0003_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mirror_Dracula_png_0
+      name: jump0003_0
       rect:
         serializedVersion: 2
-        x: 1001
-        y: 986
-        width: 544
-        height: 736
+        x: 323
+        y: 92
+        width: 800
+        height: 804
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2f3958bc84dbb3d0800000000000000
-      internalID: -3189722210208497878
+      spriteID: 1d3b3e7ff0b935510800000000000000
+      internalID: 1536742390749180881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump0003_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 4
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e0433624185a7a0800000000000000
+      internalID: -6366540376086147435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump0003_2
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 0
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548efde3b5cb8ec20800000000000000
+      internalID: 3236043432348608581
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Mirror_Dracula_png_0: -3189722210208497878
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
