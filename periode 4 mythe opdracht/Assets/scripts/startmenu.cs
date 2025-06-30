@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class startmenu : MonoBehaviour
 {
     [SerializeField] private GameObject startButton;
@@ -8,12 +8,12 @@ public class startmenu : MonoBehaviour
     public void onStartButtonClicked()
     {
         Debug.Log("Start button clicked, loading game scene...");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("start scene");
+        SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
     public void onTuturiolButtonClicked()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
     }
     public void onExitButtonClicked()
     {
