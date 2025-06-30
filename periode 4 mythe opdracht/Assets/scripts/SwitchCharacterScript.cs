@@ -38,6 +38,10 @@ public class SwitchCharacterScript : MonoBehaviour
         {
             StartCoroutine(TemporaryTransformation());
         }
+        if (Input.GetButtonDown("Transform") && isTransforming)
+        {
+            StopCoroutine(TemporaryTransformation());
+        }
     }
 
     private IEnumerator TemporaryTransformation()

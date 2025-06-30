@@ -11,6 +11,10 @@ public class startmenu : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("start scene");
         Time.timeScale = 1;
     }
+    public void onTuturiolButtonClicked()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
     public void onExitButtonClicked()
     {
         Debug.Log("Exit button clicked, quitting application...");
