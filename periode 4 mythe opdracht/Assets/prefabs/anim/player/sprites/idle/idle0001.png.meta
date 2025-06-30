@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: 3369399851761963896
     second: idle0001_0
-  - first:
-      213: 6903280682711266670
-    second: idle0001_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,9 +103,9 @@ TextureImporter:
       name: idle0001_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 191
-        width: 467
+        x: 1
+        y: 1
+        width: 468
         height: 965
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -120,28 +117,6 @@ TextureImporter:
       bones: []
       spriteID: 8739686305382ce20800000000000000
       internalID: 3369399851761963896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle0001_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 12
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e6532dda4316dcf50800000000000000
-      internalID: 6903280682711266670
       vertices: []
       indices: 
       edges: []
