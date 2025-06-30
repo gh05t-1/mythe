@@ -91,6 +91,7 @@ public class PlayerHealth : MonoBehaviour
         if (health + amount <= maxHealth)
         {
             health += amount;
+            Slider.value = health;
         }
         else
         {

@@ -22,7 +22,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (inShadow == false)
         {
-            Debug.Log("rwar");
+            //Debug.Log("rwar");
             playerHealth.TakeDamage(damage);
         }
     }
@@ -33,7 +33,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         if (collision.gameObject.tag == "Shadow")
         {
             inShadow = true;
-            Debug.Log("yippe");
+            //Debug.Log("yippe");
         }
     }
 
