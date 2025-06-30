@@ -157,6 +157,7 @@ public class enemyMovement : MonoBehaviour
                 playerHealth.TakeDamage(damage);
                 Debug.Log("Tick Damage");
                 lastDamageTime = Time.time;
+                anim.SetTrigger("Attack");
             }
         }
     }

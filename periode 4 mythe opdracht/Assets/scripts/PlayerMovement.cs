@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float fallGravity = 2f;
 
     private Animator anim;
+    private ParticleSystem ps;
 
     // Start is called before the first frame update
 
@@ -54,11 +55,12 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Debug.Log("!!");
-       
+        ps = GetComponent<ParticleSystem>();
         parentRB = transform.parent.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         parentRB.gravityScale = fallGravity;
         Debug.Log(parentRB);
+        ps.Stop();
 
     }
     void Update()
@@ -72,6 +74,14 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
 
         anim.SetFloat("AnimHorizontal", horizontal);
+        if (horizontal != 0)
+        {
+            //ps.Play();
+        }
+        else
+        {
+            //ps.Stop();
+        }
         if (IsGrounded())
         {
             anim.SetBool("AnimGroundedCheck", true);

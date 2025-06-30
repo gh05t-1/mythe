@@ -33,7 +33,7 @@ public class AttackArea : MonoBehaviour
 
             Debug.Log("hit an anemy");
             enemy.GetComponent<EnemyHealth>().LoseHealth(2);
-            Health.Revive(100);
+            Health.Revive(50);
 
         }
         /*

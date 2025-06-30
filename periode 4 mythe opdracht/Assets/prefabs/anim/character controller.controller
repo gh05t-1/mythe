@@ -57,7 +57,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemeyAttack
+  m_Name: Falling
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -74,7 +74,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4e1340393f36d8c499413a3d4a58556c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 34127127acb01784487e1154cea606ba, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -306,7 +306,7 @@ BlendTree:
     m_DirectBlendParameter: AnimHorizontal
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 2a9697ef4d1e63549b8235deed3f0f2b, type: 2}
+    m_Motion: {fileID: 7400000, guid: 6b402a2a91539cd46a685c5bf1521320, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -335,7 +335,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: walk cycle
+  m_Name: 12
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -577,7 +577,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: punch
+  m_Name: Jumping
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -593,7 +593,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 30e90294b1891fc438179c51b8af7cc9, type: 2}
+  m_Motion: {fileID: 7400000, guid: e4916f3f937f3ce4a9a5962a2bd146bf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
