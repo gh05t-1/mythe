@@ -32,7 +32,7 @@ public class AttackArea : MonoBehaviour
         if (enemy.CompareTag("Enemy")) {
 
             Debug.Log("hit an anemy");
-            enemy.GetComponent<EnemyHealth>().LoseHealth(2);
+            enemy.GetComponent<EnemyHealth>().LoseHealth(5);
             Health.Revive(50);
 
         }

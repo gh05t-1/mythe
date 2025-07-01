@@ -18,5 +18,9 @@ public class EnemyHealth : MonoBehaviour
     public void LoseHealth(int amount) {
         lives -= amount;
         Debug.Log("enemy lost life");
+        if (lives <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
