@@ -7,7 +7,7 @@ public class startmenu : MonoBehaviour
     [SerializeField] private GameObject OptionsButton;
     public void onStartButtonClicked()
     {
-        Debug.Log("Start button clicked, loading game scene...");
+        //Debug.Log("Start button clicked, loading game scene...");
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
@@ -17,12 +17,12 @@ public class startmenu : MonoBehaviour
     }
     public void onExitButtonClicked()
     {
-        Debug.Log("Exit button clicked, quitting application...");
+        //Debug.Log("Exit button clicked, quitting application...");
         Application.Quit();
     }
     public void onOptionsButtonClicked()
     {
-        Debug.Log("options button clicked, loading game scene...");
+        //Debug.Log("options button clicked, loading game scene...");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Options");
     }
 }

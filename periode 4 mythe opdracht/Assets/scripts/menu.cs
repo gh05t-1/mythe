@@ -13,12 +13,12 @@ public class menu : MonoBehaviour
     }
     public void onMenuButtonClicked()
     {
-        Debug.Log("menu button clicked, loading game scene...");
+        //Debug.Log("menu button clicked, loading game scene...");
         SceneManager.LoadScene("start menu");
     }
     public void onResumeButtonClicked()
     {
-        Debug.Log("resume");
+        //Debug.Log("resume");
         Time.timeScale = 1;
         MenuButton.SetActive(false);
         ResumeButton.SetActive(false);

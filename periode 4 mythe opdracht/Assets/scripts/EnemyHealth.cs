@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    private int lives = 10;
+    private int lives = 5;
     private ParticleSystem ps;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,11 +19,12 @@ public class EnemyHealth : MonoBehaviour
     }
     public void LoseHealth(int amount) {
         lives -= amount;
-        Debug.Log("enemy lost life");
+        //Debug.Log("enemy lost life");
         if (lives <= 0)
         {
             ps.Play();
-            GameObject.Destroy(gameObject, 0.6f);
+            GameObject.Destroy(gameObject, 0.30f);
+            
         }
     }
 }

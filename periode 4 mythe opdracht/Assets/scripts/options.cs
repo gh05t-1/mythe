@@ -12,7 +12,7 @@ public class options : MonoBehaviour
     }
     public void onMenuButtonClicked()
     {
-        Debug.Log("menu button clicked, loading game scene...");
+        //Debug.Log("menu button clicked, loading game scene...");
         UnityEngine.SceneManagement.SceneManager.LoadScene("start menu");
     }
 

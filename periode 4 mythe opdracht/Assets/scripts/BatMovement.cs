@@ -19,7 +19,7 @@ public class BatMovement : MonoBehaviour
     {
         parentRB = transform.parent.GetComponent<Rigidbody2D>();
 
-        Debug.Log(parentRB);
+        //Debug.Log(parentRB);
     }
     // Update is called once per frame
     void Update()
@@ -35,7 +35,7 @@ public class BatMovement : MonoBehaviour
     private void FixedUpdate()
     {
         parentRB.linearVelocity = new Vector2(horizontal * speed, parentRB.linearVelocity.y);
-        // óf
+        // ï¿½f
         parentRB.linearVelocity = new Vector2(parentRB.linearVelocity.x, vertical * speed);
 
     }

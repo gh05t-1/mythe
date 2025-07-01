@@ -14,7 +14,7 @@ public class AttackArea : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("this works");
+        //Debug.Log("this works");
         player = GameObject.FindGameObjectWithTag("Player");
         Health = player.GetComponent<PlayerHealth>();
     }
@@ -27,11 +27,11 @@ public class AttackArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit something");
+        //Debug.Log("hit something");
         var enemy = collision.gameObject;
         if (enemy.CompareTag("Enemy")) {
 
-            Debug.Log("hit an anemy");
+            //Debug.Log("hit an anemy");
             enemy.GetComponent<EnemyHealth>().LoseHealth(5);
             Health.Revive(50);
 

@@ -87,7 +87,7 @@ public class PlayerHealth : MonoBehaviour
     }
     
     public void Revive(int amount) {
-        Debug.Log("try to revive");
+        //Debug.Log("try to revive");
         if (health + amount <= maxHealth)
         {
             health += amount;
