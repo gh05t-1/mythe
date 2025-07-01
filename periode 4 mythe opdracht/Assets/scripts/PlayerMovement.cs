@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         parentRB = transform.parent.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         parentRB.gravityScale = fallGravity;
-        Debug.Log(parentRB);
+        //Debug.Log(parentRB);
         ps.Stop();
 
     }

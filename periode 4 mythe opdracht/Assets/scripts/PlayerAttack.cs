@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("woking");
+        //Debug.Log("woking");
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Dash"))
         {
             Attack();
-            Debug.Log("Attack");           
+            //Debug.Log("Attack");           
         }
 
         if (attacking)

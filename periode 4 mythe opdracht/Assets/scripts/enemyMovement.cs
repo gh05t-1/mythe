@@ -155,7 +155,7 @@ public class enemyMovement : MonoBehaviour
             if (Time.time >= lastDamageTime + waitForSeconds)
             {
                 playerHealth.TakeDamage(damage);
-                Debug.Log("Tick Damage");
+                //Debug.Log("Tick Damage");
                 lastDamageTime = Time.time;
                 anim.SetTrigger("Attack");
             }
