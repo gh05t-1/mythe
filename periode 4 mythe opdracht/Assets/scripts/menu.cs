@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class menu : MonoBehaviour
     public void onMenuButtonClicked()
     {
         Debug.Log("menu button clicked, loading game scene...");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("start menu");
+        SceneManager.LoadScene("start menu");
     }
     public void onResumeButtonClicked()
     {
